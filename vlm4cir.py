@@ -57,7 +57,7 @@ conversation = [
                            "gallery image [2]: <image_placeholder>."
                            "gallery image [3]: <image_placeholder>."
                            "gallery image [4]: <image_placeholder>."
-                           "Rank the 4 gallery images above based on their relevance to the source image modified by instruction text. The gallery images should be listed in descending order using identifiers. The most relevant images should be listed first. The output format should be [] > [], e.g., [1] > [2]. Only response the ranking results, do not say any word or explain.",
+                           "Rank the 4 gallery images above based on their relevance to the source image modified by instruction text. The gallery images should be listed in descending order using identifiers. The most relevant images should be listed first. The output format should be [] > [] > [] > [], e.g., [1] > [2] > [3] > [4]. Only response the ranking results, do not say any word or explain.",
                 "images": [source_image, img1, img2, img3, img4,],
             },
             {
