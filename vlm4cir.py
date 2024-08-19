@@ -53,87 +53,19 @@ conversation = [
             {
                 "role": "user",
                 "content": "I will provide you with 8 gallary images, each indicated by number identifier []. \nRank the gallary images based on their relevance to source image <image_placeholder> edited by instruction text 'be a same breed dog with his puppy running'.",
-                "images": [source_image],
+                           "gallery image [1]: <image_placeholder>."
+                           "gallery image [2]: <image_placeholder>."
+                           "gallery image [3]: <image_placeholder>."
+                           "gallery image [4]: <image_placeholder>."
+                           "gallery image [5]: <image_placeholder>."
+                           "gallery image [6]: <image_placeholder>."
+                           "gallery image [7]: <image_placeholder>."
+                           "gallery image [8]: <image_placeholder>.",
+                "images": [source_image, img1, img2, img3, img4, img5, img6, img7, img8],
             },
             {
                 "role": "Assistant",
-                "content": "Received source image."
-            },
-            {
-                "role": "user",
-                "content": "image [1]: <image_placeholder>",
-                "images": [img1],
-            },
-            {
-                "role": "Assistant",
-                "content": "Received gallery image [1]."
-            },
-            {
-                "role": "user",
-                "content": "image [2]: <image_placeholder>",
-                "images": [img2],
-            },
-            {
-                "role": "Assistant",
-                "content": "Received gallery image [2]."
-            },
-            {
-                "role": "user",
-                "content": "image [3]: <image_placeholder>",
-                "images": [img3],
-            },
-            {
-                "role": "Assistant",
-                "content": "Received gallery image [3]."
-            },
-            {
-                "role": "user",
-                "content": "image [4]: <image_placeholder>",
-                "images": [img4],
-            },
-            {
-                "role": "Assistant",
-                "content": "Received gallery image [4]."
-            },
-            {
-                "role": "user",
-                "content": "image [5]: <image_placeholder>",
-                "images": [img5],
-            },
-            {
-                "role": "Assistant",
-                "content": "Received gallery image [5]."
-            },
-            {
-                "role": "user",
-                "content": "image [6]: <image_placeholder>",
-                "images": [img6],
-            },
-            {
-                "role": "Assistant",
-                "content": "Received gallery image [6]."
-            },
-            {
-                "role": "user",
-                "content": "image [7]: <image_placeholder>",
-                "images": [img7],
-            },
-            {
-                "role": "Assistant",
-                "content": "Received gallery image [7]."
-            },
-            {
-                "role": "user",
-                "content": "image [8]: <image_placeholder>",
-                "images": [img8],
-            },
-            {
-                "role": "Assistant",
-                "content": "Received gallery image [8]."
-            },
-            {   
-                "role": "user",
-                "content": "Rank the 8 gallery images above based on their relevance to the source image modified by instruction text. The gallery imageßs should be listed in descending order using identifiers. The most relevant images should be listed first. The output format should be [] > [], e.g., [1] > [2]. Only response the ranking results, do not say any word or explain."
+                "content": ""
             }
         ]
 
