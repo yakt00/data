@@ -52,7 +52,7 @@ conversation = [
             },
             {
                 "role": "user",
-                "content": "I will provide you with 8 gallary images, each indicated by number identifier []. \nRank the gallary images based on their relevance to source image <image_placeholder> edited by instruction text 'be a same breed dog with his puppy running'.",
+                "content": "I will provide you with 8 gallary images, each indicated by number identifier []. \nRank the gallary images based on their relevance to source image <image_placeholder> edited by instruction text 'be a same breed dog with his puppy running'."
                            "gallery image [1]: <image_placeholder>."
                            "gallery image [2]: <image_placeholder>."
                            "gallery image [3]: <image_placeholder>."
