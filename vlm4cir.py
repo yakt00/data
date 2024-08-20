@@ -3,11 +3,38 @@ import copy
 import json
 import torch
 from PIL import Image, ImageOps
+import cv2
 from tqdm import tqdm
 from transformers import AutoModelForCausalLM
 from deepseek_vl.models import VLChatProcessor, MultiModalityCausalLM
 from deepseek_vl.utils.io import load_pil_images
 
+
+def load_number_pil_images(conversations: List[Dict[str, str]]) -> List[PIL.Image.Image]:
+    pil_images = []
+
+    for message in conversations:
+        if "images" not in message:
+            continue
+        
+        for i, image_data in enumerate(message["images"]):
+            # if image_data.startswith("data:image"):
+            #     # Image data is in base64 format
+            #     _, image_data = image_data.split(",", 1)
+            #     image_bytes = base64.b64decode(image_data)
+            #     pil_img = PIL.Image.open(io.BytesIO(image_bytes))
+            # else:
+            #     # Image data is a file path
+            if i == 0:
+                pil_img = PIL.Image.open(image_data)
+                pil_img = pil_img.convert("RGB")
+            else:
+                img = cv2.imread(image_data)
+                cv2.putText(img, '['+str(i)+']', (30,60), cv2.FONT_HERSHEY_SIMPLEX, 2, (0,0,0),2, cv2.LINE_AA)
+                pil_img = Image.fromarray(cv2.cvtColor(img,cv2.COLOR_BGR2RGB))
+            pil_images.append(pil_img)
+
+    return pil_images
 
 def clean_response(response):
     new_response = ''
@@ -66,7 +93,7 @@ conversation = [
             }
         ]
 
-pil_images = load_pil_images(conversation)
+pil_images = load_number_pil_images(conversation)
 prepare_inputs = vl_chat_processor(
     conversations=conversation, images=pil_images, force_batchify=True
 ).to(vl_gpt.device)
