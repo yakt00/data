@@ -10,7 +10,7 @@ from deepseek_vl.models import VLChatProcessor, MultiModalityCausalLM
 from deepseek_vl.utils.io import load_pil_images
 
 
-def load_number_pil_images(conversations: List[Dict[str, str]]) -> List[PIL.Image.Image]:
+def load_number_pil_images(conversations):
     pil_images = []
 
     for message in conversations:
