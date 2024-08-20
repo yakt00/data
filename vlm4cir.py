@@ -72,19 +72,20 @@ img7 = 'imgs/dev-138-3-img1.png'
 img8 = 'imgs/dev-629-0-img0.png'
 
 conversation = [
-            {
-                "role": "system",
-                "content": "You are a intelligent assistant ranker that can rank the gallery images based on their relavence to the edited source image modified by the text instruction."
+            # {
+            #     "role": "system",
+            #     "content": "You are a intelligent assistant ranker that can rank the gallery images based on their relavence to the edited source image modified by the text instruction."
 
-            },
+            # },
             {
                 "role": "user",
-                "content": "I will provide you with 4 gallary images, each indicated by number identifier []. \nRank the gallary images based on their relevance to source image <image_placeholder> edited by instruction text 'be a same breed dog with his puppy running'."
+                "content": "Describe each image and their difference with source image <image_placeholder>."
+                           # "I will provide you with 4 gallary images, each indicated by number identifier []. \nRank the gallary images based on their relevance to source image <image_placeholder> edited by instruction text 'be a same breed dog with his puppy running'."
                            "gallery image [1]: <image_placeholder>."
                            "gallery image [2]: <image_placeholder>."
                            "gallery image [3]: <image_placeholder>."
                            "gallery image [4]: <image_placeholder>."
-                           "Rank the 4 gallery images above based on their relevance to the source image modified by instruction text. The gallery images should be listed in descending order using identifiers. The most relevant images should be listed first. The output format should be [] > [] > [] > [], e.g., [1] > [2] > [3] > [4]. Only response the ranking results, do not say any word or explain.",
+                           # "Rank the 4 gallery images above based on their relevance to the source image modified by instruction text. The gallery images should be listed in descending order using identifiers. The most relevant images should be listed first. The output format should be [] > [] > [] > [], e.g., [1] > [2] > [3] > [4]. Only response the ranking results, do not say any word or explain.",
                 "images": [source_image, img1, img2, img3, img4,],
             },
             {
