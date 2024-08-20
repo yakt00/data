@@ -26,7 +26,7 @@ def load_number_pil_images(conversations: List[Dict[str, str]]) -> List[PIL.Imag
             # else:
             #     # Image data is a file path
             if i == 0:
-                pil_img = PIL.Image.open(image_data)
+                pil_img = Image.open(image_data)
                 pil_img = pil_img.convert("RGB")
             else:
                 img = cv2.imread(image_data)
