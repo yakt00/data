@@ -19,7 +19,7 @@ tokenizer = AutoTokenizer.from_pretrained('openbmb/MiniCPM-V-2_6', trust_remote_
 # img7 = '../DeepSeek-VL/examples/dev-138-3-img1.png'
 # img8 = '../DeepSeek-VL/examples/dev-629-0-img0.png'
 
-image = Image.open('../DeepSeek-VL/examples/dev-150-3-img1.png').convert('RGB')
+image = Image.open('../DeepSeek-VL/imgs/dev-150-3-img1.png').convert('RGB')
 
 # First round chat 
 question = "Describe the image."
